@@ -1,41 +1,3 @@
-import { formatCurrency } from "../../scripts/utils/money.js";
-class Product{
-    id;
-    image;
-    name;
-    rating;
-    priceCents;
-    section
-    constructor(productDetails){
-        this.id = productDetails.id;
-        this.image = productDetails.image;
-        this.name = productDetails.name;
-        this.rating = productDetails.rating;
-        this.priceCents = productDetails.priceCents;
-        this.section = productDetails.section;
-     
-    }
-    //method to get the stars
-   getStars(){
-    return `images/ratings/rating-${this.rating.stars}.png`
-   }
-   getPrice(){
-    return `${formatCurrency(
-                      this.priceCents
-                    )}`
-   }
-}
-/* const product1 = new Product({
-        id:'product1',
-        image: 'images/products/athletic-cotton-socks-6-pairs.jpg',
-        name: 'Athletic Cotton Socks - 6 Pairs',
-        rating:{
-            stars: 40,
-            count: 15
-        },
-        priceCents:1099,
-        section: 'latest',
-    }); */
 
 
 export let products = [
@@ -94,7 +56,7 @@ export let products = [
     {
         id:'product5',
         image:'images/products/men-slim-fit-summer-shorts-Gray.jpg',
-        name:"Men's-Chino-pants-beige",
+        name:"Men's Slim Fit Summer Shorts - Gray",
         rating:{
             stars:40,
             count:17
@@ -118,7 +80,7 @@ export let products = [
     },
    {
         id:'product7',
-        image:'images/products/men-slim-fit-tee-yireh-black.jpg',
+        image:'images/products/men-slim-fit-tee-yireh-black-removebg-preview.png',
         name:"Men' Slim Fit Tee Yireh - Black",
         rating:{
             stars:45,
@@ -131,7 +93,7 @@ export let products = [
     
    {
         id:'product8',
-        image:'images/products/men-kiiki-slim-fit-shirt-cream.jpg',
+        image:'images/products/men-kiiki-slim-fit-shirt-cream-removebg-preview.png',
         name:"Men's Kiiki Slim Fit Shirt - Cream",
         rating:{
             stars:35,
@@ -143,7 +105,7 @@ export let products = [
     },
    {
         id:'product9',
-        image:'images/products/men-corporate-shirt-2-pieces.jpg',
+        image:'images/products/men-corporate-shirt-2-pieces-removebg-preview.png',
         name:"Men's Corporate Shirt - 2 Pieces",
         rating:{
             stars:45,
@@ -167,7 +129,7 @@ export let products = [
     },
    {
         id:'product11',
-        image:'images/products/men-cotton-long-sleeve-shirt-black.png',
+        image:'images/products/men-cotton-long-sleeve-shirt-black-removebg-preview.png',
         name:"Men's Cotton Long Sleeve Shirt - Black",
         rating:{
             stars:40,
@@ -216,7 +178,7 @@ export let products = [
     },
     {
         id:'product15',
-        image:'images/products/men-jeans-Blue.jpg',
+        image:'images/products/men-jeans-Blue-removebg-preview.png',
         name:"Men's Jeans - Blue",
         rating:{
             stars:50,
@@ -229,7 +191,7 @@ export let products = [
     //women products
     {
          id:'product16',
-        image:'images/products/women-large-jacket-cream.jpg',
+        image:'images/products/women-large-jacket-cream-removebg-preview.png',
         name:"Women's Large Jacket - Cream",
         rating:{
             stars:35,
@@ -241,7 +203,7 @@ export let products = [
     },
     {
          id:'product17',
-        image:'images/products/women-mini-cowl-dress-pink.jpg',
+        image:'images/products/women-mini-cowl-dress-pink-removebg-preview.png',
         name:"Women's Mini Cowl Dress - Pink",
         rating:{
             stars:40,
@@ -253,7 +215,7 @@ export let products = [
     },
     {
          id:'product18',
-        image:'images/products/women-jean-dress-blue.jpg',
+        image:'images/products/women-jean-dress-blue-removebg-preview.png',
         name:"Women's Jean Dress - Blue",
         rating:{
             stars:45,
@@ -265,7 +227,7 @@ export let products = [
     },
     {
          id:'product19',
-        image:'images/products/women-long-sleeve-sweater-red.jpg',
+        image:'images/products/women-long-sleeve-sweater-red-removebg-preview.png',
         name:"Women's Long Sleeve Sweater - Red",
         rating:{
             stars:45,
@@ -277,7 +239,7 @@ export let products = [
     },
     {
          id:'product20',
-        image:'images/products/women-v-shirt-cream.jpg',
+        image:'images/products/women-v-shirt-cream-removebg-preview.png',
         name:"Women's V-Shirt - Cream",
         rating:{
             stars:40,
@@ -289,7 +251,7 @@ export let products = [
     },
     {
          id:'product21',
-        image:'images/products/women-shoes-multi-colored.jpg',
+        image:'images/products/women-shoes-multi-colored-removebg-preview.png',
         name:"Women's Shoes - Multi-Colored",
         rating:{
             stars:40,
@@ -301,7 +263,7 @@ export let products = [
     },
     {
          id:'product22',
-        image:'images/products/women-long-sleeve-sweater-705-black.jpg',
+        image:'images/products/women-long-sleeve-sweater-705-black-removebg-preview.png',
         name:"Women's Long Sleeve Sweater - Black",
         rating:{
             stars:50,
@@ -349,7 +311,7 @@ export let products = [
     },
     {
          id:'product26',
-        image:'images/products/minoha™-japanese-inspired-ceramic-Set.jpg',
+        image:'images/products/minoha_-japanese-inspired-ceramic-Set-removebg-preview.png',
         name:"Minoha™ Japanese Inspired Ceramic Set",
         rating:{
             stars:40,
@@ -373,7 +335,7 @@ export let products = [
     },
     {
          id:'product28',
-        image:'images/products/thaleia-ceramic-mug-white.jpg',
+        image:'images/products/thaleia-ceramic-mug-white-removebg-preview.png',
         name:"Thaleia Ceramic Mug - White",
         rating:{
             stars:40,
@@ -397,7 +359,7 @@ export let products = [
     },
     {
          id:'product30',
-        image:'images/products/cielo™-matte-ceramic-mug-set.jpg',
+        image:'images/products/cielo_-matte-ceramic-mug-set-removebg-preview.png',
         name:"Cielo™ Matte Ceramic Mug Set",
         rating:{
             stars:40,
@@ -409,7 +371,7 @@ export let products = [
     },
     {
          id:'product31',
-        image:'images/products/modern-savara-lounge-chair-brown.jpg',
+        image:'images/products/modern-savara-lounge-chair-brown-removebg-preview.png',
         name:"Modern Savara Lounge Chair - Brown",
         rating:{
             stars:50,
@@ -421,7 +383,7 @@ export let products = [
     },
     {
          id:'product32',
-        image:'images/products/modern-lunea-lounge-chair-light-skya.jpg',
+        image:'images/products/modern-lunea-lounge-chair-light-skya-removebg-preview.png',
         name:"Modern Lunea Lounge Chair Light - Skya",
         rating:{
             stars:45,
@@ -433,7 +395,7 @@ export let products = [
     },
     {
          id:'product33',
-        image:'images/products/modern-ayden-lounge-chair-grey.jpg',
+        image:'images/products/modern-ayden-lounge-chair-grey-removebg-preview.png',
         name:"Modern Ayden Lounge Chair Grey",
         rating:{
             stars:45,
@@ -445,7 +407,7 @@ export let products = [
     },
     {
          id:'product34',
-        image:'images/products/modern-savara-nest-chair-verdra.jpg',
+        image:'images/products/modern-savara-nest-chair-verdra-removebg-preview.png',
         name:"Modern Savara Nest Chair - Verdra",
         rating:{
             stars:50,
@@ -468,8 +430,5 @@ export let products = [
         keywords: ['cupboard', 'storage unit', 'cream cupboard', '2 door storage']
     },
 
-].map((productDetails) => {
-  /* console.log('Creating product:', productDetails); */
-  return new Product(productDetails);
-});
+]
 

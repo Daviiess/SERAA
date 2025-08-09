@@ -7,15 +7,23 @@ import { v4 as uuidv4 } from 'https://esm.sh/uuid';
 import { addToCart } from './data/cart.js';
 
 
+let cart = JSON.parse(localStorage.getItem('cart'));//Displaying the cart quantity
+updateCartQuantity();
+ function updateCartQuantity(){
+  let cartQuantity = 0;
+  cart.forEach((cartItem) => {
+    cartQuantity += cartItem.quantity;
+  });
+  document.querySelector(".js-cart-count").innerHTML = cartQuantity;
+  
+}
+updateCartQuantity();
+
 
     const allOrders = JSON.parse(localStorage.getItem('allOrders')) || [];
     const latestOrderID = localStorage.getItem('latestOrderID');
     const latestOrder = allOrders.find((order)=> order.id === latestOrderID);
-    /* 
-    let carts = latestOrder.cart;
-    const orderID = latestOrder.id;
-    const savedDate = latestOrder.date; */
-    /* console.log(cart); */
+
     const jsContainer = document.querySelector('.js-container');
     jsContainer.innerHTML = '';
     let allOrdersHtml = '';
@@ -23,14 +31,6 @@ import { addToCart } from './data/cart.js';
           let cart = order.cart;
     const orderID = order.id;
     const savedDate = order.date;  
-   /* console.log(cart) */
-   
-   /* let savedDate = localStorage.getItem('savedDate'); */
-  
-   /*   console.log(savedDate); */
-   
-
-
 
 
        let totalCostCents = 0;
@@ -50,11 +50,6 @@ import { addToCart } from './data/cart.js';
   let totalBeforeTax = totalCostCents + totalDeliveryCents;
   let estimatedTax = totalBeforeTax * 0.1;
   let orderTotal = totalBeforeTax + estimatedTax;
-  /* const orderID = uuidv4() */
-
-/* let orderID = savedID */
-/* console.log(orderID) */
-
 
 let orderMainHtml = '';
 
@@ -86,7 +81,7 @@ let htmlOrders = '';
 
     let deliveryDateObject = deliveryOptions.find((deliveryOption)=> deliveryOption.deliveryId === cartItem.deliveryId)
     let matchingProduct = products.find((product)=> product.id === cartItem.productId );
-   /*  console.log(matchingProduct) */
+
     const today = dayjs()
         const deliveryDate = today.add(deliveryDateObject.deliveryDate, "days");
         const deliveryDateFormat = deliveryDate.format("dddd, MMMM D");
@@ -136,10 +131,12 @@ buyAgain.forEach((button)=>{
     const productId = button.dataset.productId;
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
    let cartItem = cart.find((cartItems)=>{
+    
       return cartItems.productId === productId;
     })
     if(cartItem){
       cartItem.quantity+=1;
+      updateCartQuantity()
     }
     else{
       cart.push({
@@ -149,9 +146,7 @@ buyAgain.forEach((button)=>{
       })
     }
     localStorage.setItem('cart' , JSON.stringify(cart));
-    /* let newCart = [
-      {productId:productId}
-    ] */
+    
     
   })
 })
@@ -166,12 +161,3 @@ trackBtn.forEach((button)=>{
     
   })
 })
-/* document.addEventListener('DOMContentLoaded', () => {
-  const container = document.querySelector('.js-container');
-  if (!container) {
-    console.warn("⚠️ .js-container not found.");
-    return;
-  }
-
-  returnOrder(); // safe to call now
-}); */

@@ -1,4 +1,4 @@
-/*  import { updatePaymentDelivery } from "../checkout/orderSummary.js";  */
+
 export let cart;
 loadFromStorage();
  export function loadFromStorage(){

@@ -3,7 +3,7 @@ import { cart, addToCart } from "./data/cart.js";
 import { formatCurrency } from "./utils/money.js";
 
 function renderProductsList(products){
-
+localStorage.getItem('cartNumber');
   const sections = {
   latest: document.querySelector(".latest-products-grid"),
   men: document.querySelector(".men-products-grid"),
@@ -20,7 +20,6 @@ function renderProductsList(products){
 
 JSON.parse(localStorage.getItem("cart"));
 
-console.log(sections);
 products.forEach((product) => {
   let html = `
         <div class="products-card">
@@ -32,11 +31,11 @@ products.forEach((product) => {
                     <p class="products-name-p">${product.name}</p>
                     </div>
                     <div class="product-rating">
-                    <img src="${product.getStars()}" alt="">
+                    <img src= "images/ratings/rating-${product.rating.stars}.png" alt="">
                     <p>${product.rating.count}</p>
                     </div>
                     <div class="product-price">
-                    <p class="product-text">$${product.getPrice()}</p>
+                    <p class="product-text">$${formatCurrency(product.priceCents)}</p>
                     </div>
                     <div class="select-container">
                     <select name="select-value" class = 'select-value-no'>
@@ -60,7 +59,7 @@ products.forEach((product) => {
                     </div>
     `;
 
-  //  <img src="images/ratings/rating-10.png" alt="">
+updateCartQuantity();
   if (product.section === "latest") {
     sections.latest.innerHTML += html;
   } else if (product.section === "men") {
@@ -74,12 +73,13 @@ products.forEach((product) => {
   }
 });
 
-function updateCartQuantity() {
+ function updateCartQuantity(){
   let cartQuantity = 0;
   cart.forEach((cartItem) => {
     cartQuantity += cartItem.quantity;
   });
   document.querySelector(".js-cart-count").innerHTML = cartQuantity;
+  
 }
 
 
@@ -105,7 +105,7 @@ searchInput.addEventListener('input' , ()=>{
 
   renderProductsList(filteredProducts);
 
-  let a =document.querySelector('.Men-product-h1');
+  let a = document.querySelector('.Men-product-h1');
   document.querySelector('.Men-product-p').innerHTML = '';
   let b = document.querySelector('.latest-products-h1');
   document.querySelector('.product-info').innerHTML = '';

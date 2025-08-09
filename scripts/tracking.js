@@ -10,7 +10,7 @@ const order = allOrders.find(order => String(order.id) === String(orderID));
 const product = products.find((product)=> product.id === productId);
 
  const productCart = (order.cart).find((prodCart)=>product.id === prodCart.productId); 
-  /* console.log(order.cart) */
+
   const deliveryOption = deliveryOptions.find(opt => String(opt.deliveryId) === String(productCart.deliveryId));
 const daysToAdd = deliveryOption ? Number(deliveryOption.deliveryDate) : Number(productCart.deliveryId || 0);
 
@@ -47,8 +47,8 @@ const deliveryDateFormat = deliveryDate.format('dddd, MMMM D');
 const stages = ['Order Placed' , 'Shipped' , 'Out for Delivery', 'Delivered'];
 
 let daysToDelivery = deliveryDate.diff(today, 'day');
-console.log(today.format('dddd, MMMM D'))
-/* console.log(daysToDelivery) */
+
+
 let currentStage;
 if(daysToDelivery>=3){
     currentStage = 1;

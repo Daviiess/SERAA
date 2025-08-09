@@ -1,18 +1,11 @@
 import { cart, removeFromCart, updateDeliveryOption } from "../data/cart.js";
 import { products } from "../data/products.js";
 import { formatCurrency } from "./../utils/money.js";
-import dayjs from "https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js";
+
 import { deliveryOptions } from "../data/deliveryOption.js";
 
 export function renderPaymentSummary() {
-  /* cart.forEach((cartItem) => {
-                let matchingItem;
-
-                products.forEach((product) => {
-                    if (cartItem.productId === product.id) {
-                    matchingItem = product; // ✅ Found the matching product
-                    }
-                }); */
+ 
   let html = "";
   let totalCostCents = 0;
   let totalDeliveryCents = 0;

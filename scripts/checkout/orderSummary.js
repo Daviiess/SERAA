@@ -6,7 +6,6 @@ import { deliveryOptions } from "../data/deliveryOption.js";
 import { renderPaymentSummary } from "./paymentSummary.js";
 import { v4 as uuidv4 } from 'https://esm.sh/uuid';
 
-/* import { returnOrder } from "../returnOrder.js"; */
 
 //Using dayJs to get the date of arrival
 
@@ -79,7 +78,7 @@ export function renderCartSection() {
   
   function generateDeliveryOption(matchingProduct, cartItem) {
     let html = "";
-    //To check the option that is being selected
+    //To check the delivery option that is being selected
     deliveryOptions.forEach((deliveryOption) => {
       const isChecked = deliveryOption.deliveryId === cartItem.deliveryId;
       const today = dayjs();
@@ -122,17 +121,12 @@ export function renderCartSection() {
   document.querySelector(".js-holder").innerHTML = cartHtml;
 
 
-  //updating the cart
+  //updating the cart with quantity
 const updateBtn = document.querySelectorAll('.js-update-link');
 updateBtn.forEach((button)=>{
 const updateId = button.dataset.updateId;
 
-
 button.addEventListener('click' , ()=>{
-/* updateCart(updateId)
- */
-
-
 const newInput = document.createElement('input');
 const oldValue = document.querySelector(`.cart-number[data-update-id = "${updateId}"]`);
 newInput.setAttribute('type' , 'number');
