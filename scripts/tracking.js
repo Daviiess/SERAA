@@ -15,17 +15,6 @@ const product = products.find((product)=> product.id === productId);
 const daysToAdd = deliveryOption ? Number(deliveryOption.deliveryDate) : Number(productCart.deliveryId || 0);
 
 
-/* if (!order) {
-  /* console.error('Order not found'); 
-} else {
- /*  console.log(order); */ // You can now render tracking info here
-/* } 
-if (!product) {
-  console.error('Order not found');
-} else { */
-  /* console.log(product);  // You can now render tracking info here
-}  */
-
 
  const today = dayjs();
       const deliveryDate = dayjs().add(daysToAdd, 'day');
