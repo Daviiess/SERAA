@@ -1,0 +1,57 @@
+.tracking-section-container{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 40%;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    
+}
+.tracking-section{
+   /*  border: 1px solid rgb(167, 167, 167); */
+    padding: 2rem 5rem;
+    box-shadow: 0 0 10px var(--primary-color);
+}
+.tracking-image img{
+    width: 250px;
+    height: 200px;
+    object-fit: contain;
+    margin: .5rem 0 1.5rem 0;
+    margin-left: -2.8rem;
+}
+.link{
+    font-size: .9rem;
+}
+.h1{
+    font-size: 1.4rem;
+    margin: 1rem 0;
+}
+.p{
+    padding: .5rem 0rem;
+    font-size: .9rem;
+    font-weight: 550;
+}
+.tracker{
+    width: 350px;
+    height: 20px;
+    border: 1px solid;
+    padding: 0 1rem;
+}
+.progress-tracker {
+  display: flex;
+  justify-content: space-between;
+}
+.stage{
+    position: relative;
+    padding: 10px;
+    /* flex: 1; */
+      text-align: center;
+  border-bottom: 8px solid lightgray;
+
+}
+.stage.completed{
+    border-color: green;
+}
+.stage.active{
+    border-color: orange;
+}

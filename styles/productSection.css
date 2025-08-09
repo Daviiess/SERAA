@@ -1,0 +1,201 @@
+.latest-products-grid{
+display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.6rem;
+    padding: 2rem 5%;
+    justify-items: center;
+    align-items: center;
+    
+}
+.women-products-grid{
+display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.6rem;
+    padding: 2rem 5%;
+    justify-items: center;
+    align-items: center;
+}
+.men-products-grid{
+display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.6rem;
+    padding: 2rem 5%;
+    justify-items: center;
+    align-items: center;
+}
+.item-products-grid{
+display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.6rem;
+    padding: 2rem 5%;
+    justify-items: center;
+    align-items: center;
+}
+.furniture-products-grid{
+display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.6rem;
+    padding: 2rem 5%;
+    justify-items: center;
+    align-items: center;
+}
+.button-container button{
+    padding: .7rem 2rem;
+    border-radius: 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.latest-products-h1{
+    text-align: center;
+    background:linear-gradient(135deg, rgb(87, 86, 86), var(--primary-color));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Inter';
+    letter-spacing: 0.4rem;
+}
+.latest-products-h1::after{
+      content: "";
+  display: inline-block;
+  width: 40px;      
+  height: 2px;     
+  background:linear-gradient(135deg, rgb(87, 86, 86), var(--primary-color));  
+  margin-left: .2rem;  
+  vertical-align: middle;
+  color: var(--primary-color);
+}
+.Men-product-h1{
+     text-align: center;
+    background:linear-gradient(135deg, rgb(87, 86, 86), var(--primary-color));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Inter';
+    letter-spacing: 0.4rem;
+    margin-top: 1.5rem;
+}
+.Men-product-h1::after{
+      content: "";
+  display: inline-block;
+  width: 40px;      
+  height: 2px;     
+  background:linear-gradient(135deg, rgb(87, 86, 86), var(--primary-color));  
+  margin-left: .2rem;  
+  vertical-align: middle;
+  color: var(--primary-color);
+}
+.Men-product-p{
+ font-size: 1rem;
+    text-align: center;
+    letter-spacing: .5px;
+    margin-top: .5rem;
+    font-family: "Inter";
+    font-weight: 800;
+    color: rgb(89, 87, 87);
+}
+.Women-Product-h1{
+    text-align: center;
+    background:linear-gradient(135deg, rgb(87, 86, 86), var(--primary-color));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Inter';
+    letter-spacing: 0.4rem;
+    margin-top: 1.5rem;
+}
+.Women-Product-h1::after{
+      content: "";
+  display: inline-block;
+  width: 40px;      
+  height: 2px;     
+  background:linear-gradient(135deg, rgb(87, 86, 86), var(--primary-color));  
+  margin-left: .2rem;  
+  vertical-align: middle;
+  color: var(--primary-color);
+}
+.Women-Product-p{
+     font-size: 1rem;
+    text-align: center;
+    letter-spacing: .5px;
+    margin-top: .5rem;
+    font-family: "Inter";
+    font-weight: 800;
+    color: rgb(89, 87, 87);
+}
+.ceramic-Product-h1{
+    text-align: center;
+    background:linear-gradient(135deg, rgb(87, 86, 86), var(--primary-color));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Inter';
+    letter-spacing: 0.4rem;
+    margin-top: 1.5rem;
+}
+.ceramic-Product-h1::after{
+      content: "";
+  display: inline-block;
+  width: 40px;      
+  height: 2px;     
+  background:linear-gradient(135deg, rgb(87, 86, 86), var(--primary-color));  
+  margin-left: .2rem;  
+  vertical-align: middle;
+  color: var(--primary-color);
+}
+.ceramic-Product-p{
+     font-size: 1rem;
+    text-align: center;
+    letter-spacing: .5px;
+    margin-top: .5rem;
+    font-family: "Inter";
+    font-weight: 800;
+    color: rgb(89, 87, 87);
+}
+.furniture-Product-h1{
+    text-align: center;
+    background:linear-gradient(135deg, rgb(87, 86, 86), var(--primary-color));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Inter';
+    letter-spacing: 0.4rem;
+    margin-top: 1.5rem;
+}
+.furniture-Product-h1::after{
+      content: "";
+  display: inline-block;
+  width: 40px;      
+  height: 2px;     
+  background:linear-gradient(135deg, rgb(87, 86, 86), var(--primary-color));  
+  margin-left: .2rem;  
+  vertical-align: middle;
+  color: var(--primary-color);
+}
+.furniture-Product-p{
+     font-size: 1rem;
+    text-align: center;
+    letter-spacing: .5px;
+    margin-top: .5rem;
+    font-family: "Inter";
+    font-weight: 800;
+    color: rgb(89, 87, 87);
+}
+.products-name-p{
+    font-size: 1rem;
+    text-align: left;
+    letter-spacing: .5px;
+    margin-top: .5rem;
+    font-family: "Inter";
+    font-weight: 800;
+    color: rgb(89, 87, 87);
+
+}
+.item-added{
+    color: green;
+    font-size: 1rem;
+    margin-left:4rem;
+    display: none;
+
+}

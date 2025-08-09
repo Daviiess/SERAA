@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+  --primary-color:#B4BCBE;
+  
+    --text-color:#FAFAFF;
+ 
+    --bg-color: #1A1A1A;
+    --secondary-text-color: #CBCDC8;
+}
+body{
+    font-family: "Inter", sans-serif;
+    font-size: 55%;
+    background: var(--text-color);
+}
+html{
+    scroll-behavior: smooth;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 20%;
+}
+.logo{
+        background: linear-gradient(270deg, rgb(177, 176, 176), #B4BCBE);
+    font-size: 2rem;
+    font-weight: bold;
+    color: transparent;
+    background-clip: text;
+    text-decoration: none;
+    font-family: cursive;
+    letter-spacing: 2px;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    display: inline-block;
+}
+.logo:hover{
+  transform: scale(1.15);
+}
+.checkout h1{
+    font-size: 1.6rem;
+    
+}
+.checkout-link{
+text-decoration: none;
+color: rgb(73, 142, 164);
+display: inline-block;
+text-align: center;
+}
+.main{
+    padding: 3rem 20%;
+    overflow: scroll;
+}
+.checkout-grid{
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 1.5rem;
+    
+}
+.cart-header h2{
+   padding-bottom: 1.5rem;
+   font-size: 1.5rem;
+   color: #333637
+}
+.cart-item-details-grid{
+    display: grid;
+    grid-template-columns: 150px 1fr 1fr;
+}
+.product-image img{
+      width: 110px;
+    cursor: pointer;
+    height: 110px;
+    object-fit: cover;
+}
+.cart-item-container{
+    margin-bottom: 1rem;
+    border: .7px solid var(--secondary-text-color);
+    padding: 1rem 2rem;
+    box-shadow: 0 0 3px var(--primary-color);
+  
+}
+.Delivery-date{
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgb(28, 93, 31);
+}
+.cart-details{
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+.product-name{
+font-size: 1rem;
+font-weight: bold;
+color: var(--bg-color);
+}
+.product-price{
+    color: rgb(195, 46, 20);
+    font-size: 1rem;
+}
+
+.product-quantity{
+font-size: 1rem;
+}
+.link-primary{
+    color: rgb(88, 88, 246);
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: .3rem;
+
+}
+.delivery-options-title{
+    font-size: 1rem;
+    margin-left: 1.7rem;
+    margin-bottom: .5rem;
+    letter-spacing: .9px;
+    font-weight: bold;
+
+}
+.delivery-option-price{
+    font-size: 1rem;
+ color: #666d6d;
+}
+.delivery-option-date{
+    font-size: 1rem;
+    letter-spacing: .5px;
+    color: green;
+}
+.delivery-option{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: .5rem;
+}
+.radio-btn{
+    height: 1.1rem;
+    width: 1.1rem;
+    display: inline-block;
+}
+.payment-summary{
+border: .7px solid var(--secondary-text-color);  
+box-shadow: 0 0 3px var(--primary-color);
+height: 30vh;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+
+padding: 1.5rem 1rem;
+
+}
+.payment-summary-title{
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
+color: rgb(25, 84, 28);
+margin-bottom: 1.5rem;
+}
+.payment-summary-row{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    padding: .15rem 0rem;
+}
+.hr-shipping{
+    width: 50px;
+    margin-left: 17rem;
+    margin-bottom: .5rem;
+}
+.hr-total{
+    margin-bottom: .2rem;
+}
+.button-primary{
+    margin-top: 1rem;
+    padding: .5rem 0rem ;
+   border-radius: .5rem;
+   font-weight: bold;
+   background-color: #a2abac;
+   border: none;
+   cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  color: #323131;
+  font-size: .8rem;
+}
+
+.empty-cart{
+font-size: .9rem;
+margin-left: .4rem;
+ margin-bottom: .4rem; 
+
+}
+.empty-cart-link{
+    font-size: 1rem;
+    text-decoration: none;
+    background-color: #666d6d;
+    padding: .5rem 1.2rem;
+    display: inline-block;
+    color: white;
+    border-radius: 2rem;
+}
+.save-btn{
+    padding: .1rem .2rem;
+    border: none;
+    background: transparent;
+    display: inline-block;
+    margin-left: .15rem;
+    cursor: pointer;
+    color:rgb(88, 88, 246);
+}
+@media (max-width: 1000px) {
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-item-details-grid {
+    grid-template-columns: 100px 1fr;
+    row-gap: 20px;
+  }
+
+  .payment-summary {
+    grid-row: 1;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,118 @@
+.about{
+background: rgb(253, 253, 253);
+    width: 100vw;
+border-radius: 1rem;
+border-bottom-left-radius: 0;
+border-bottom-right-radius: 0;
+padding: 4rem 0;
+
+/*  background-image: url(../images/products/umbrella.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;  */
+
+}
+.about-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 10%;
+    height: 100%;
+
+    
+}
+.about-h2{
+    text-align: center;
+    font-size: 2.4rem;
+    letter-spacing: 2px;
+    font-family: "Inter" , 'san-serif';
+    padding: 1rem 0;
+     background:linear-gradient(135deg, rgb(87, 86, 86), var(--primary-color));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 1rem;
+   
+}
+.about-content-h2{
+text-align: left;
+
+margin-left: 2rem;
+font-size: 1.6rem;
+color: var(--secondary-text-color);
+font-weight: 800;
+
+}
+.about-paragraph{
+    font-weight: 700;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.about-image img{
+    width: 32vw;
+    
+    aspect-ratio: 1/1;
+    border-radius: 15%;
+    background: teal;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+      object-fit: cover;
+  border-radius: 1.2rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+
+}
+.about-image img:hover{
+    transform: scale(1.01);
+}
+
+.about-content p{
+    font-size: 1.3rem;
+      line-height: 1.8rem;
+      letter-spacing: 1px;
+      max-width: 700px;
+  margin: 0 auto;
+  padding: 1.8rem;
+      font-family: "Inter" , 'san-serif';
+}
+.about-content a{
+    margin-top: 1rem;
+    margin-left: 2rem;
+    text-decoration: none;
+    display: inline-block;
+  padding: 0.9rem 2rem;
+  border-radius: 3rem;
+background: linear-gradient(135deg, var(--primary-color), #333);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgb(196, 194, 194);
+  transition: all 0.3s ease-in-out;
+}
+.about-content button:hover{
+      transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgb(160, 159, 159);
+}
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    padding: 1.5rem 5%;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 70vw;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-content-h2 {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .about-content button {
+    margin: 1rem auto;
+  }
+}

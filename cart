@@ -1,0 +1,229 @@
+div class="cart-container">
+            <div class="cart-header">
+                <h2>Review Your order</h2>
+              </div>
+             <div class="cart-container-grid">
+                <div class="cart-checkout-item">
+                    <div class="cart-image">
+                        <img src="images/men-slim-fit-tee-705-black.jpg" alt="">
+                    </div>
+                    <div class="cart-contents">
+                        <p>Men Slim Fit Tee 705 - Black</p>
+                        <p>$12.00</p>
+                        <div class="cart-content-action">
+                            <p>Quantity:3</p>
+                            <button>update</button>
+                            <button>Delete</button>
+                        </div>
+                    </div>
+            
+                        <div class="Delivery Dates">
+                            <p>Choose a delivery Option</p>
+                            <input type="radio">
+                            <label for="date">Tuesday, July 15 </label> 
+                            <p>Free Shipping</p>
+                            <input type="radio">
+                            <label for="date">Tuesday, July 15 </label>
+                             <p>$4.99</p> 
+                            <input type="radio">
+                            <label for="date">Tuesday, July 15 </label> 
+                             <p>$7.99</p>
+                        </div>
+                    </div>
+                    <div class="cart-summary-price">
+                        <p>Order summary</p>
+                        <div class="items-container">
+                        <p>Items(3)</p>
+                        <p>$42.75</p>
+                        </div>
+                        <div class="handling-container">
+                            <p>Shopping & handling</p>
+                            <p>$4.23</p>
+                        </div>
+                        <div class="cart-before-tax-container">
+                           <p>Total before tax:</p>
+                           <p>$47.74</p> 
+                        </div>
+                        <div class="estimated-tax-container">
+                           <p>Estimated tax(10%):</p>
+                           <p>$4.77</p> 
+                        </div>
+                        <hr>
+                        <div class="order-total-container">
+                            <p>Order Total:</p>
+                            <p>$52.53</p>
+                        </div>
+                        <div class="order-button-container">
+                            <button>Place Your</button>
+                        </div>
+                    </div>
+                </div>
+             </div> 
+
+
+
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #0a0a0a;
+  text-decoration: none;
+}
+
+.checkout h1 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.main {
+  max-width: 1100px;
+  margin: 140px auto 100px;
+  padding: 0 30px;
+}
+
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 20px;
+  align-items: start;
+}
+
+.cart-header h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.cart-item-container {
+  border: 1px solid #ddd;
+  padding: 18px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.cart-item-details-grid {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr;
+  gap: 25px;
+}
+
+.product-image img {
+  max-width: 100%;
+  max-height: 120px;
+  display: block;
+  margin: 0 auto;
+}
+
+.product-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.product-price {
+  color: #b12704;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.product-quantity .link-primary {
+  margin-left: 5px;
+  color: #0073e6;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.delivery-options {
+  margin-top: 10px;
+}
+
+.delivery-options-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.delivery-option {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  align-items: start;
+  gap: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.delivery-option-date {
+  color: green;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.delivery-option-price {
+  color: #555;
+  font-size: 14px;
+}
+
+.payment-summary {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.payment-summary-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.payment-summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.subtotal-row {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.total-row {
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+  font-weight: bold;
+  color: #b12704;
+  font-size: 16px;
+}
+
+.place-order-button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #f0c14b;
+  border: 1px solid #a88734;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+
+.place-order-button:hover {
+  background-color: #e2b33c;
+}
+
+@media (max-width: 1000px) {
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-item-details-grid {
+    grid-template-columns: 100px 1fr;
+    row-gap: 20px;
+  }
+
+  .payment-summary {
+    grid-row: 1;
+    margin-bottom: 20px;
+  }
+}
