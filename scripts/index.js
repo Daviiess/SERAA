@@ -1,5 +1,5 @@
 
-let cart = JSON.parse(localStorage.getItem('cart'));
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
  updateCartQuantity();
 function updateCartQuantity(){
   let cartQuantity = 0;
