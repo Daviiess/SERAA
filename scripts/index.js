@@ -1,4 +1,4 @@
-/* import { cart } from "./data/cart.js"; */
+
 let cart = JSON.parse(localStorage.getItem('cart'));
  updateCartQuantity();
 function updateCartQuantity(){

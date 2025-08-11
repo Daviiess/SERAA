@@ -190,6 +190,7 @@ saveToStorage()
         `.js-cart-item-container-${DeleteId}`
       );
       delElement.remove();
+      renderCartSection()
       updatePaymentDelivery();
       emptyCart();
     });

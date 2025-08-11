@@ -17,7 +17,6 @@ updateCartQuantity();
   document.querySelector(".js-cart-count").innerHTML = cartQuantity;
   
 }
-updateCartQuantity();
 
 
     const allOrders = JSON.parse(localStorage.getItem('allOrders')) || [];
@@ -25,6 +24,15 @@ updateCartQuantity();
     const latestOrder = allOrders.find((order)=> order.id === latestOrderID);
 
     const jsContainer = document.querySelector('.js-container');
+
+if (allOrders.length === 0) {
+  // Show "no orders" message
+  jsContainer.innerHTML = `
+    <div class="no-orders">
+      <p>No orders placed yet.</p>
+    </div>
+  `;
+}else{
     jsContainer.innerHTML = '';
     let allOrdersHtml = '';
     allOrders.forEach((order)=>{
@@ -161,3 +169,4 @@ trackBtn.forEach((button)=>{
     
   })
 })
+}
