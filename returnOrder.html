@@ -9,20 +9,23 @@
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=shopping_cart" />
          <link rel="stylesheet" href="styles/Nav-link-header/header.css">
          <link rel="stylesheet" href="styles/returnOrder.css">
+         <link rel="stylesheet" href="styles/mediaQuery.css">
 </head>
 <body>
      <div class = "header">
     <div class="logo-div">
-        <p class="logo">FreshMart</p>
+        <a href = "cart.html" class="logo">SERAA</a>
     </div>
         
   <div class="header-links">
-      <a href="index.html#about">About</a>
+      <a href="index.html">Home</a>
       <a href="index.html#contact">Contact</a>
       <a href="productSection.html">Products</a>
     </div>
 
-        
+        <div class="menu">
+               <i class="fa-solid fa-bars"></i>
+            </div>
         
         <div class="cart-container">
              <div class="return-order">
@@ -51,58 +54,11 @@
             
                 <div class="return-grid">
                     <div class="js-container">
-                  <!--   <div class="order-container">
-                        <div class="orders-header">
-                            <div class="left-section">
-                                <div class="order-date">
-                               <p>Orders Placed:</p>
-                                <p>August 5</p>
-                                </div>
-                                <div class="order-total">
-                                    <p>Total:</p>
-                                    <p>$92.18</p>
-                                </div>
-                            </div>
-                            <div class="right-section">
-                                <div class="order-id">
-                                    <p>order ID:</p>
-                                    <p>efe3434r3r3223</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="order-main-container">
-                        <div class="order-main">
-                            
-                        <div class="order-main-left">
-                            <div class="order-image">
-                                <img src="images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg" alt="">
-                            </div>
-                            <div class="order-main-details">
-                                <div class="order-main-productName">                         
-                                    Adults Plain Cotton T-Shirt - 2 Pack - Teal
-                                </div>
-                                <div class="order-arrival-quantity">
-                                    <p>Arriving on: <span>August 14</span></p>
-                                    <p>Quantity:4</p>
-                                </div>
-                                <div class="buy-again-button">
-                                    <button><i class="fa-solid fa-arrows-spin"></i> Buy it again </button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                            <div class="right-order-main">
-                                <button>Track Package</button>
-                            </div>
-                        </div>
-                       </div>
-
-                    </div>  -->
                     </div>
                 </div>
             
            </div>
-          
+           <script src="scripts/index.js"></script>
            <script src="scripts/returnOrder.js" type="module"></script>
 </body>
 </html>

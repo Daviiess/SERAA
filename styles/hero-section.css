@@ -1,13 +1,10 @@
-/* 
-section{
-    height: 55vh;
-} */
+
 .hero-section{
     display: flex;
     justify-content: center;
     align-items: start;
     padding: 2rem 5%;
-
+z-index: 999;
 }
 .hero-text{
     width: 42vw;
@@ -32,14 +29,7 @@ section{
     gap: 1rem;
    
 }
-/* .hero-text h1{
-    font-size: 2.5rem;
-    color: var(--bg-color);
-    text-align: left;
 
-     width: 65%; 
-    font-family: "Inter";
-} */
 .hero-text-span{
     background: linear-gradient(270deg, rgb(177, 176, 176), var(--primary-color));
     background-clip: text;
@@ -100,3 +90,74 @@ section{
                 0 0px 5px #CBCDC8;
 
 }
+@media (max-width: 480px) {
+    .hero-section{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    } 
+    .hero-text{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 0 .5rem;
+    }
+    .hero-image {
+        width: 100%
+    }
+    .hero-image img{
+        width: 100%;
+    }
+    .hero-text-span{
+        font-size: 1.8rem;
+    }
+    .hero-text p{
+        font-size: 1rem;
+        padding: 0 3rem 0 0;
+    }
+    
+}
+@media (min-width: 481px) and (max-width: 768px) {
+          .hero-section{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    } 
+    .hero-text{
+        width: 100%;
+        justify-content: center;
+        align-items: start;
+        padding: 0 1.5rem;
+    }
+    .hero-image {
+        width: 100%
+    }
+    .hero-image img{
+        width: 100%;
+        object-fit: cover;
+    }
+    .hero-text-span{
+        font-size: 2.1rem;
+    }
+    .hero-text p{
+        font-size: 1.3rem;
+        
+    }
+    }
+    @media (min-width: 769px) and (max-width: 1024px){
+        .hero-text{
+            width: 100%;
+            padding: 0 1rem;
+        }
+        .hero-image{
+            width: 100%;
+        }
+        .hero-image img{
+            width: 100%;
+            object-fit: all;
+            
+        }
+        .hero-text-span{
+        font-size: 2.1rem;
+    }
+    }

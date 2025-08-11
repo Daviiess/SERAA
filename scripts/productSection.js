@@ -93,33 +93,84 @@ addToCartBtn.forEach((button) => {
 });
 }
 renderProductsList(products);
+
+
+//Code to implement search in the productSection
+const headings = {
+  menH1: document.querySelector('.Men-product-h1'),
+  menP: document.querySelector('.Men-product-p'),
+  latestH1: document.querySelector('.latest-products-h1'),
+  latestP: document.querySelector('.product-info'),
+  womenH1: document.querySelector('.Women-Product-h1'),
+  womenP: document.querySelector('.Women-Product-p'),
+  ceramicH1: document.querySelector('.ceramic-Product-h1'),
+  ceramicP: document.querySelector('.ceramic-Product-p'),
+  furnitureH1: document.querySelector('.furniture-Product-h1'),
+  furnitureP: document.querySelector('.furniture-Product-p'),
+};
+const defaultTexts = {
+  menP: headings.menP.innerHTML,
+  latestP: headings.latestP.innerHTML,
+  womenP: headings.womenP.innerHTML,
+  ceramicP: headings.ceramicP.innerHTML,
+  furnitureP: headings.furnitureP.innerHTML,
+};
+
+const noResultsEl = document.createElement('div');
+noResultsEl.className = 'no-results-message';
+noResultsEl.textContent = 'No products found';
+noResultsEl.style.textAlign = 'center';
+noResultsEl.style.padding = '2rem';
+noResultsEl.style.fontSize = '1.2rem';
+noResultsEl.style.fontWeight = '500';
+noResultsEl.style.display = 'none'; 
+document.querySelector('.productSection-container').appendChild(noResultsEl);
 const searchInput = document.querySelector('.search-input'); 
 searchInput.addEventListener('input' , ()=>{
   const query = searchInput.value.trim().toLowerCase();
   if(query === ''){
+    headings.menH1.style.display = '';
+    headings.latestH1.style.display = '';
+    headings.womenH1.style.display = '';
+    headings.ceramicH1.style.display = '';
+    headings.furnitureH1.style.display = '';
+
+    headings.menP.innerHTML = defaultTexts.menP;
+    headings.latestP.innerHTML = defaultTexts.latestP;
+    headings.womenP.innerHTML = defaultTexts.womenP;
+    headings.ceramicP.innerHTML = defaultTexts.ceramicP;
+    headings.furnitureP.innerHTML = defaultTexts.furnitureP;
+
+    noResultsEl.style.display = 'none';
     renderProductsList(products);
     return;
   }
   
   const filteredProducts = products.filter(product => product.name.toLowerCase().includes(query));
+  console.log(filteredProducts);
+  // Hide headings while searching
+  headings.menH1.style.display = 'none';
+  headings.latestH1.style.display = 'none';
+  headings.womenH1.style.display = 'none';
+  headings.ceramicH1.style.display = 'none';
+  headings.furnitureH1.style.display = 'none';
+
+  headings.menP.innerHTML = '';
+  headings.latestP.innerHTML = '';
+  headings.womenP.innerHTML = '';
+  headings.ceramicP.innerHTML = '';
+  headings.furnitureP.innerHTML = '';
+
+  // Show "no results" if empty
+  if (filteredProducts.length === 0) {
+    noResultsEl.style.display = 'block';
+  } else {
+    noResultsEl.style.display = 'none';
+  }
 
   renderProductsList(filteredProducts);
 
-  let a = document.querySelector('.Men-product-h1');
-  document.querySelector('.Men-product-p').innerHTML = '';
-  let b = document.querySelector('.latest-products-h1');
-  document.querySelector('.product-info').innerHTML = '';
-  let c = document.querySelector('.Women-Product-h1');
-  document.querySelector('.Women-Product-p').innerHTML = '';
-  let d = document.querySelector('.ceramic-Product-h1');
-  document.querySelector('.ceramic-Product-p').innerHTML = '';
-  let e = document.querySelector('.furniture-Product-h1');
-  document.querySelector('.furniture-Product-p').innerHTML = '';
-a.style.display = 'none'
-b.style.display = 'none'
-c.style.display = 'none'
-d.style.display = 'none'
-e.style.display = 'none';
+
 
 
 })

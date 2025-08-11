@@ -189,6 +189,7 @@ display: grid;
     font-family: "Inter";
     font-weight: 800;
     color: rgb(89, 87, 87);
+    padding: 0;
 
 }
 .item-added{
@@ -197,4 +198,35 @@ display: grid;
     margin-left:4rem;
     display: none;
 
+}
+
+.header-links.active {
+  display: flex;
+  opacity: 1;
+}
+
+@media(max-width:480px){
+    .products-name-p{
+        width: 100%;
+text-align: left;
+margin-left: -1.5rem;
+    }
+    .furniture-Product-h1{
+        padding: 0 1.5rem;
+    }
+}
+@media(min-width:481px) and (max-width:485px){
+  .products-name-p{
+        width: 100%;
+text-align: left;
+margin-left: -1.9rem;
+    }
+}
+
+@media(min-width:486px) and (max-width:769px){
+   .products-name-p{
+        width: 100%;
+text-align: left;
+margin-left: -1.9rem;
+    }
 }

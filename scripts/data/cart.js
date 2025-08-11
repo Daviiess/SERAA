@@ -26,10 +26,29 @@ export function saveToStorage(){ //saveToStorage
 export function addToCart(button , productId){ //cart function for adding items into the cart section.
     let addCartIcon = document.querySelectorAll(`.item-added[data-product-id = "${productId}"]`);
     addCartIcon.forEach((icon)=>{
-        icon.style.display = 'block';
-         setTimeout(()=>{
-            icon.style.display = 'none'
-    },1100)
+        
+  icon.style.display = 'block';
+  icon.style.opacity = '0';
+  icon.style.transform = 'translateY(10px)';
+  icon.style.transition = 'all 0.4s ease-in-out';
+
+  // Trigger reflow so animation works
+  void icon.offsetWidth;
+
+  // Animate in
+  icon.style.opacity = '1';
+  icon.style.transform = 'translateY(0)';
+
+  // After 1s, animate out
+  setTimeout(() => {
+    icon.style.opacity = '0';
+    icon.style.transform = 'translateY(-10px)';
+  }, 1000);
+
+  // After fade-out, hide completely
+  setTimeout(() => {
+    icon.style.display = 'none';
+  }, 1400);
     })
    
     const productContainer = button.closest('.products-card');

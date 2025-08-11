@@ -31,15 +31,14 @@
 .footer-links a:hover {
   color: #000;
 }
-@media (max-width: 600px) {
-  .contact-container {
-    flex-direction: column;
-  }
 
-  .footer-content {
+@media (max-width: 600px) {
+
+
+   .footer-content {
     gap: 0.5rem;
   }
-
+ 
   .footer-links {
     flex-direction: column;
     gap: 0.8rem;

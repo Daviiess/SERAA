@@ -121,6 +121,7 @@ export function renderCartSection() {
   document.querySelector(".js-holder").innerHTML = cartHtml;
 
 
+
   //updating the cart with quantity
 const updateBtn = document.querySelectorAll('.js-update-link');
 updateBtn.forEach((button)=>{
@@ -158,7 +159,12 @@ oldValue.textContent = updatedValue;
 newInput.style.display = 'none'
 Savebutton.style.display = 'none';
 
-
+let cartQuantity = 0;
+  cart.forEach((cartItem) => {
+    cartQuantity += cartItem.quantity;
+  });
+  
+renderCartSection();
 updatePaymentDelivery();
 saveToStorage()
 }
@@ -221,7 +227,7 @@ saveToStorage()
 placeOrderBtn?.addEventListener('click' , (event)=>{
   event.preventDefault();
   if(cart.length === 0){
-    alert('Empty cart')
+    alert('Empty cart \nOrder to continue')
   }else{
     const todays = dayjs();
   const savedDate = todays.format('MMMM D');

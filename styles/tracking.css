@@ -8,14 +8,13 @@
     
 }
 .tracking-section{
-   /*  border: 1px solid rgb(167, 167, 167); */
     padding: 2rem 5rem;
     box-shadow: 0 0 10px var(--primary-color);
 }
 .tracking-image img{
     width: 250px;
     height: 200px;
-    object-fit: contain;
+    object-fit: cover;
     margin: .5rem 0 1.5rem 0;
     margin-left: -2.8rem;
 }
@@ -44,8 +43,7 @@
 .stage{
     position: relative;
     padding: 10px;
-    /* flex: 1; */
-      text-align: center;
+    text-align: center;
   border-bottom: 8px solid lightgray;
 
 }
@@ -54,4 +52,20 @@
 }
 .stage.active{
     border-color: orange;
+}
+@media (max-width: 390px) {
+  .tracking-section-container {
+    padding: 1rem; 
+    gap: 1rem;
+  }
+
+  .tracking-section {
+    padding: 3rem; 
+  }
+
+.tracking-image img {
+    width: 100%;
+    margin: 0 auto;
+}
+
 }

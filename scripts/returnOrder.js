@@ -58,18 +58,18 @@ let orderMainHtml = '';
             <div class="orders-header">
                             <div class="left-section">
                                 <div class="order-date">
-                               <p>Orders Placed:</p>
-                                <p>${savedDate}</p>
+                               <p class = "firstP">Orders Placed:</p>
+                                <p class = "secondP">${savedDate}</p>
                                 </div>
                                 <div class="order-total">
                                     <p>Total:</p>
-                                    <p>$${formatCurrency(orderTotal)}</p>
+                                    <p class = "total-p">$${formatCurrency(orderTotal)}</p>
                                 </div>
                             </div>
                             <div class="right-section">
                                 <div class="order-id">
                                     <p>order ID:</p>
-                                    <p>${orderID}</p>
+                                    <p class="id-No">${orderID}</p>
                                 </div>
                             </div>
                         </div>
