@@ -1,4 +1,4 @@
-import { cart, removeFromCart, updateDeliveryOption } from "../data/cart.js";
+import { cart} from "../data/cart.js";
 import { products } from "../data/products.js";
 import { formatCurrency } from "./../utils/money.js";
 
@@ -54,7 +54,7 @@ export function renderPaymentSummary() {
           <div class="payment-summary-money">$
           ${formatCurrency(orderTotal)}</div>
         </div>
-        <a  href = "#" class="place-order-button button-primary">Place your order</a>
+        <span class="place-order-button button-primary">Place your order</span>
             `;
 
   return html;

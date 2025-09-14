@@ -195,7 +195,8 @@ display: grid;
 .item-added{
     color: green;
     font-size: 1rem;
-    margin-left:4rem;
+   text-align: center;
+   margin-left: -4rem;
     display: none;
 
 }
@@ -213,6 +214,9 @@ margin-left: -1.5rem;
     }
     .furniture-Product-h1{
         padding: 0 1.5rem;
+    }
+    .item-added{
+      margin-right: -1rem;
     }
 }
 @media(min-width:481px) and (max-width:485px){
